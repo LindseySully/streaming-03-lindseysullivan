@@ -76,3 +76,6 @@ This program is responsible for establishing a process to listen for messages co
 ## Additional Notes:
 
 To review the queues for the file you can use rabbitmq web-based platform to check which queues are active and their activity. This greatly helps with debugging if messages are being sent or not. 
+
+Two terminals:
+![Alt text](<Screenshots/Terminal Output.png>)
