@@ -1,18 +1,18 @@
-2023-09-08 17:24:39,996.emit_message.INFO ==================================================
-2023-09-08 17:24:39,996.emit_message.INFO Today is 2023-09-08 at 05:24 PM
-2023-09-08 17:24:39,996.emit_message.INFO Running on: posix Darwin 22.6.0
-2023-09-08 17:24:39,997.emit_message.INFO Python version:  3.9.12
-2023-09-08 17:24:39,997.emit_message.INFO Python path: /Users/lindseysullivan/miniconda3
-2023-09-08 17:24:39,997.emit_message.INFO Working dir: /Users/lindseysullivan/Documents/School/Streaming-Data/Modules/streaming-03-lindseysullivan
-2023-09-08 17:24:39,997.emit_message.INFO ==================================================
-2023-09-08 17:24:40,074.emit_message.INFO  [x] Sent message 1:b"{'Song': 'Plan A', 'Artist(s)': 'Paulo Londra'}"
-2023-09-08 17:24:43,080.emit_message.INFO  [x] Sent message 2:b"{'Song': 'ARRANCARMELO', 'Artist(s)': 'WOS'}"
-2023-09-08 17:24:46,087.emit_message.INFO  [x] Sent message 3:b"{'Song': 'Chance', 'Artist(s)': 'Paulo Londra'}"
-2023-09-08 17:24:49,093.emit_message.INFO  [x] Sent message 4:b"{'Song': 'Una Noche en Medell\xc3\xadn', 'Artist(s)': 'Cris Mj'}"
-2023-09-08 17:24:52,095.emit_message.INFO  [x] Sent message 5:b"{'Song': 'cuatro veinte', 'Artist(s)': 'Emilia'}"
-2023-09-08 17:24:55,102.emit_message.INFO  [x] Sent message 6:b"{'Song': 'As It Was', 'Artist(s)': 'Harry Styles'}"
-2023-09-08 17:24:58,108.emit_message.INFO  [x] Sent message 7:b'{\'Song\': \'Te Mentir\xc3\xada\', \'Artist(s)\': "La K\'onga"}'
-2023-09-08 17:25:01,115.emit_message.INFO  [x] Sent message 8:b"{'Song': 'Felices x Siempre', 'Artist(s)': 'Maria Becerra'}"
-2023-09-08 17:25:04,122.emit_message.INFO  [x] Sent message 9:b"{'Song': 'Envolver', 'Artist(s)': 'Anitta'}"
-2023-09-08 17:25:07,129.emit_message.INFO  [x] Sent message 10:b"{'Song': 'La Trampa es Ley', 'Artist(s)': 'LIT killah'}"
-2023-09-08 17:25:10,138.emit_message.INFO Connection closed after sending messages.
+2023-09-08 18:28:58,812.emit_message.INFO ==================================================
+2023-09-08 18:28:58,813.emit_message.INFO Today is 2023-09-08 at 06:28 PM
+2023-09-08 18:28:58,813.emit_message.INFO Running on: posix Darwin 22.6.0
+2023-09-08 18:28:58,813.emit_message.INFO Python version:  3.9.12
+2023-09-08 18:28:58,813.emit_message.INFO Python path: /Users/lindseysullivan/miniconda3
+2023-09-08 18:28:58,813.emit_message.INFO Working dir: /Users/lindseysullivan/Documents/School/Streaming-Data/Modules/streaming-03-lindseysullivan
+2023-09-08 18:28:58,813.emit_message.INFO ==================================================
+2023-09-08 18:28:58,881.emit_message.INFO  [x] Sent message 1:b"{'Song': 'Plan A', 'Artist(s)': 'Paulo Londra'}"
+2023-09-08 18:29:01,887.emit_message.INFO  [x] Sent message 2:b"{'Song': 'ARRANCARMELO', 'Artist(s)': 'WOS'}"
+2023-09-08 18:29:04,889.emit_message.INFO  [x] Sent message 3:b"{'Song': 'Chance', 'Artist(s)': 'Paulo Londra'}"
+2023-09-08 18:29:07,892.emit_message.INFO  [x] Sent message 4:b"{'Song': 'Una Noche en Medell\xc3\xadn', 'Artist(s)': 'Cris Mj'}"
+2023-09-08 18:29:10,898.emit_message.INFO  [x] Sent message 5:b"{'Song': 'cuatro veinte', 'Artist(s)': 'Emilia'}"
+2023-09-08 18:29:13,904.emit_message.INFO  [x] Sent message 6:b"{'Song': 'As It Was', 'Artist(s)': 'Harry Styles'}"
+2023-09-08 18:29:16,911.emit_message.INFO  [x] Sent message 7:b'{\'Song\': \'Te Mentir\xc3\xada\', \'Artist(s)\': "La K\'onga"}'
+2023-09-08 18:29:19,914.emit_message.INFO  [x] Sent message 8:b"{'Song': 'Felices x Siempre', 'Artist(s)': 'Maria Becerra'}"
+2023-09-08 18:29:22,920.emit_message.INFO  [x] Sent message 9:b"{'Song': 'Envolver', 'Artist(s)': 'Anitta'}"
+2023-09-08 18:29:25,927.emit_message.INFO  [x] Sent message 10:b"{'Song': 'La Trampa es Ley', 'Artist(s)': 'LIT killah'}"
+2023-09-08 18:29:28,936.emit_message.INFO Connection closed after sending messages.

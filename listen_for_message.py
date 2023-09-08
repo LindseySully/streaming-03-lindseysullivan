@@ -22,11 +22,20 @@ import sys
 # Import the pika library to facilitate communication with RabbitMQ
 import pika
 
+# Import CSV library to write messages to new file
+import csv
+
 # Import the custom logger setup utility (local file named util_logger.py)
 from util_logger import setup_logger
 
 # Setup custom logging
 logger, logname = setup_logger(__file__)
+
+# Define output CSV file
+OUTPUT_CSV_FILE = "received_messages.csv"
+
+# Initalize a list to store recevied messages.csv
+received_messages = []
 
 # ---------------------------------------------------------------------------
 # Define program functions
@@ -44,7 +53,9 @@ def process_message(ch,method,properties,body):
                   Not used here since we're focused on the message body.
     - body: The body of the message (the actual content).
     """
-    logger.info(f"Received: {body.decode()}")
+    message = body.decode() # convert binary to string
+    logger.info(f"Received: {message}")
+    received_messages.append(message) # append the received message to the received_messages list
 
 # Define a main function to run the program
 # If no argument is provided, set a default value to localhost
@@ -90,8 +101,20 @@ def main(hn: str = "localhost"):
         logger.warning("User interrupted the listening process. Exiting...")
         sys.exit(0)
     finally:
+        save_received_messages_to_csv() # save received messages to csv
         logger.info("Closing connection. Goodbye.")
         connection.close()
+
+def save_received_messages_to_csv():
+    """
+    Save messages to a CSV file
+
+    """
+    if received_messages:
+        with open(OUTPUT_CSV_FILE, "w",newline="") as csv_file:
+            csv_file.writelines([message + '\n' for message in received_messages])
+        logger.info(f"Received messages saved to {OUTPUT_CSV_FILE}")
+
 # ---------------------------------------------------------------------------
 # If this is the script we are running, then call some functions and execute code!
 # ---------------------------------------------------------------------------

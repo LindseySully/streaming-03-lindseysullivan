@@ -47,8 +47,9 @@ python util_aboutrabbit.py
 pip list
 ```
 
+## Project Files
 
-## emit_message.py
+### Producer - emit_message.py
 
 This program is responsible for emit_messages from a dedicated CSV file via RabbitMQ. The program completes the following:
 1. Sets constants for the input file, host, and number of messages
@@ -68,9 +69,24 @@ This program is responsible for emit_messages from a dedicated CSV file via Rabb
 
 1. Sends a message until messages_sent reaches the value defined in the MAX_MESSAGES constant.
 
-## listen_for_message.py
+### Consumer - listen_for_message.py
 
-This program is responsible for establishing a process to listen for messages continuously from the "song" queue. The connection is closed via the users input of ctrl + c. 
+This program is responsible for establishing a process to listen for messages continuously from the "song" queue. The connection is closed via the users input of ctrl + c. Additionally, before closing the connection will save all received messages to a csv file.
+
+1. Define functions for:
+    - process_message
+        - Processes the message and converts binary to string
+        - Displays the received message via logger
+        - Appends the message to the received_message list
+    - main
+        - Creates a connection to a communication channel
+        - Uses the channel to declare a queue
+        - Uses the channel to consume messages from the queue
+        - Lets the user know it is waiting for messages
+        - When the user closes the connection via Ctrl + c; the received messages are saved to a CSV file
+    - save_received_messages_to_csv
+        - Saves messages to a CSV file
+        - Informs the user that the received messages have been saved to a CSV file
 
 
 ## Additional Notes:
