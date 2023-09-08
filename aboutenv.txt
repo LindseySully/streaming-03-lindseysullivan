@@ -1,0 +1,16 @@
+======================================================================
+Welcome to the Python Debugging Information Utility ABOUTENV.PY
+Date and Time: 2023-09-08 at 11:30 AM
+======================================================================
+======================================================================
+YAY! .venv directory exists.
+======================================================================
+YAY! The .venv virtual environment is active.
+======================================================================
+YAY! All dependencies are installed in the .venv.
+======================================================================
+
+All checks passed successfully! Your environment is set up correctly.
+If it asks you to upgrade pip, please do so using the suggested command.
+
+======================================================================
