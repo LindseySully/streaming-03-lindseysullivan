@@ -11,6 +11,15 @@
 1. VS Code Extension: Python (by Microsoft)
 1. RabbitMQ Server installed and running locally
 
+## Libraries
+- OS
+- Sys
+- CSV
+- JSON
+- Time
+- Pika
+    - Included in requirements.txt
+
 ## Virtual Environment Setup
 Create a local Python virtual environment to isolate our project's third-party dependencies from other projects.
 
@@ -56,7 +65,7 @@ This program is responsible for emit_messages from a dedicated CSV file via Rabb
     - The user may specify the max amount of messages to send. This limits the continually streaming of messages from the CSV file which contains 5,000 lines.
 1. Defines functions for:
     - prepare_message_from_row(row)
-        - prepares the CSV file information to be trasmitted into a binary message for a given row
+        - prepares the CSV file information to be trasmitted into a JSON message for a given row
         - limits the message information to the song name and artist name.
     - stream_row(input_file_name)
         - takes the input file name and prepares the data to stream.
@@ -77,16 +86,15 @@ This program is responsible for establishing a process to listen for messages co
     - process_message
         - Processes the message and converts binary to string
         - Displays the received message via logger
-        - Appends the message to the received_message list
+        - Parses the received JSON string into the CSV file
+        - writes the received message to the CSV file
     - main
         - Creates a connection to a communication channel
         - Uses the channel to declare a queue
         - Uses the channel to consume messages from the queue
         - Lets the user know it is waiting for messages
         - When the user closes the connection via Ctrl + c; the received messages are saved to a CSV file
-    - save_received_messages_to_csv
-        - Saves messages to a CSV file
-        - Informs the user that the received messages have been saved to a CSV file
+    
 
 
 ## Additional Notes:
@@ -94,4 +102,4 @@ This program is responsible for establishing a process to listen for messages co
 To review the queues for the file you can use rabbitmq web-based platform to check which queues are active and their activity. This greatly helps with debugging if messages are being sent or not. 
 
 Two terminals:
-![Alt text](<Screenshots/Terminal Output.png>)
+![Alt text](Screenshots/Bonus-Terminals-Running.png)

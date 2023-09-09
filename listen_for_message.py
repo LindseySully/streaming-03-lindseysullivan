@@ -13,9 +13,6 @@ Terminal controls:
 
 """
 
-
-
-
 # Import necessary modules from the Python Standard Library
 import sys
 
@@ -34,8 +31,10 @@ logger, logname = setup_logger(__file__)
 # Define output CSV file
 OUTPUT_CSV_FILE = "received_messages.csv"
 
-# Initalize a list to store recevied messages.csv
-received_messages = []
+# Open the CSV file for writing and write the header row
+with open(OUTPUT_CSV_FILE, "w", newline="") as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(["Song","Artist(s)"])  # Write the header row
 
 # ---------------------------------------------------------------------------
 # Define program functions
@@ -53,9 +52,25 @@ def process_message(ch,method,properties,body):
                   Not used here since we're focused on the message body.
     - body: The body of the message (the actual content).
     """
+
     message = body.decode() # convert binary to string
     logger.info(f"Received: {message}")
-    received_messages.append(message) # append the received message to the received_messages list
+    
+    # Parse the received message
+    try:
+        message_info = eval(message)  # Evaluate the string as a dictionary
+        song_name = message_info.get("Song", "")
+        artist_name = message_info.get("Artist(s)", "")
+        
+        # Write the message data to the CSV file
+        with open(OUTPUT_CSV_FILE, "a", newline="") as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow([song_name, artist_name])
+        
+        logger.info(f"Received message saved to {OUTPUT_CSV_FILE}")
+    except Exception as e:
+        logger.error(f"Error processing the received message: {e}")
+
 
 # Define a main function to run the program
 # If no argument is provided, set a default value to localhost
@@ -101,19 +116,9 @@ def main(hn: str = "localhost"):
         logger.warning("User interrupted the listening process. Exiting...")
         sys.exit(0)
     finally:
-        save_received_messages_to_csv() # save received messages to csv
         logger.info("Closing connection. Goodbye.")
         connection.close()
 
-def save_received_messages_to_csv():
-    """
-    Save messages to a CSV file
-
-    """
-    if received_messages:
-        with open(OUTPUT_CSV_FILE, "w",newline="") as csv_file:
-            csv_file.writelines([message + '\n' for message in received_messages])
-        logger.info(f"Received messages saved to {OUTPUT_CSV_FILE}")
 
 # ---------------------------------------------------------------------------
 # If this is the script we are running, then call some functions and execute code!

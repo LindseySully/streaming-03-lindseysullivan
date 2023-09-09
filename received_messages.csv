@@ -1,10 +1,12 @@
-{'Song': 'Plan A', 'Artist(s)': 'Paulo Londra'}
-{'Song': 'ARRANCARMELO', 'Artist(s)': 'WOS'}
-{'Song': 'Chance', 'Artist(s)': 'Paulo Londra'}
-{'Song': 'Una Noche en Medellín', 'Artist(s)': 'Cris Mj'}
-{'Song': 'cuatro veinte', 'Artist(s)': 'Emilia'}
-{'Song': 'As It Was', 'Artist(s)': 'Harry Styles'}
-{'Song': 'Te Mentiría', 'Artist(s)': "La K'onga"}
-{'Song': 'Felices x Siempre', 'Artist(s)': 'Maria Becerra'}
-{'Song': 'Envolver', 'Artist(s)': 'Anitta'}
-{'Song': 'La Trampa es Ley', 'Artist(s)': 'LIT killah'}
+Song,Artist(s)
+Una Noche en Medellín,Cris Mj
+Plan A,Paulo Londra
+ARRANCARMELO,WOS
+Chance,Paulo Londra
+Una Noche en Medellín,Cris Mj
+cuatro veinte,Emilia
+As It Was,Harry Styles
+Te Mentiría,La K'onga
+Felices x Siempre,Maria Becerra
+Envolver,Anitta
+La Trampa es Ley,LIT killah

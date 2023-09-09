@@ -1,21 +1,30 @@
-2023-09-08 18:28:56,162.listen_for_message.INFO ==================================================
-2023-09-08 18:28:56,162.listen_for_message.INFO Today is 2023-09-08 at 06:28 PM
-2023-09-08 18:28:56,162.listen_for_message.INFO Running on: posix Darwin 22.6.0
-2023-09-08 18:28:56,162.listen_for_message.INFO Python version:  3.9.12
-2023-09-08 18:28:56,162.listen_for_message.INFO Python path: /Users/lindseysullivan/miniconda3
-2023-09-08 18:28:56,162.listen_for_message.INFO Working dir: /Users/lindseysullivan/Documents/School/Streaming-Data/Modules/streaming-03-lindseysullivan
-2023-09-08 18:28:56,162.listen_for_message.INFO ==================================================
-2023-09-08 18:28:56,184.listen_for_message.INFO  [*] Waiting for messages. To exit press CTRL+C
-2023-09-08 18:28:58,882.listen_for_message.INFO Received: {'Song': 'Plan A', 'Artist(s)': 'Paulo Londra'}
-2023-09-08 18:29:01,889.listen_for_message.INFO Received: {'Song': 'ARRANCARMELO', 'Artist(s)': 'WOS'}
-2023-09-08 18:29:04,891.listen_for_message.INFO Received: {'Song': 'Chance', 'Artist(s)': 'Paulo Londra'}
-2023-09-08 18:29:07,893.listen_for_message.INFO Received: {'Song': 'Una Noche en Medellín', 'Artist(s)': 'Cris Mj'}
-2023-09-08 18:29:10,900.listen_for_message.INFO Received: {'Song': 'cuatro veinte', 'Artist(s)': 'Emilia'}
-2023-09-08 18:29:13,906.listen_for_message.INFO Received: {'Song': 'As It Was', 'Artist(s)': 'Harry Styles'}
-2023-09-08 18:29:16,913.listen_for_message.INFO Received: {'Song': 'Te Mentiría', 'Artist(s)': "La K'onga"}
-2023-09-08 18:29:19,915.listen_for_message.INFO Received: {'Song': 'Felices x Siempre', 'Artist(s)': 'Maria Becerra'}
-2023-09-08 18:29:22,922.listen_for_message.INFO Received: {'Song': 'Envolver', 'Artist(s)': 'Anitta'}
-2023-09-08 18:29:25,928.listen_for_message.INFO Received: {'Song': 'La Trampa es Ley', 'Artist(s)': 'LIT killah'}
-2023-09-08 18:29:33,050.listen_for_message.WARNING User interrupted the listening process. Exiting...
-2023-09-08 18:29:33,051.listen_for_message.INFO Received messages saved to received_messages.csv
-2023-09-08 18:29:33,051.listen_for_message.INFO Closing connection. Goodbye.
+2023-09-08 19:07:58,603.listen_for_message.INFO ==================================================
+2023-09-08 19:07:58,603.listen_for_message.INFO Today is 2023-09-08 at 07:07 PM
+2023-09-08 19:07:58,603.listen_for_message.INFO Running on: posix Darwin 22.6.0
+2023-09-08 19:07:58,603.listen_for_message.INFO Python version:  3.9.12
+2023-09-08 19:07:58,603.listen_for_message.INFO Python path: /Users/lindseysullivan/miniconda3
+2023-09-08 19:07:58,603.listen_for_message.INFO Working dir: /Users/lindseysullivan/Documents/School/Streaming-Data/Modules/streaming-03-lindseysullivan
+2023-09-08 19:07:58,603.listen_for_message.INFO ==================================================
+2023-09-08 19:07:58,626.listen_for_message.INFO  [*] Waiting for messages. To exit press CTRL+C
+2023-09-08 19:07:58,626.listen_for_message.INFO Received: {"Song": "Una Noche en Medell\u00edn", "Artist(s)": "Cris Mj"}
+2023-09-08 19:07:58,626.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:01,618.listen_for_message.INFO Received: {"Song": "Plan A", "Artist(s)": "Paulo Londra"}
+2023-09-08 19:08:01,618.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:04,625.listen_for_message.INFO Received: {"Song": "ARRANCARMELO", "Artist(s)": "WOS"}
+2023-09-08 19:08:04,626.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:07,631.listen_for_message.INFO Received: {"Song": "Chance", "Artist(s)": "Paulo Londra"}
+2023-09-08 19:08:07,633.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:10,637.listen_for_message.INFO Received: {"Song": "Una Noche en Medell\u00edn", "Artist(s)": "Cris Mj"}
+2023-09-08 19:08:10,639.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:13,643.listen_for_message.INFO Received: {"Song": "cuatro veinte", "Artist(s)": "Emilia"}
+2023-09-08 19:08:13,645.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:16,646.listen_for_message.INFO Received: {"Song": "As It Was", "Artist(s)": "Harry Styles"}
+2023-09-08 19:08:16,647.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:19,653.listen_for_message.INFO Received: {"Song": "Te Mentir\u00eda", "Artist(s)": "La K'onga"}
+2023-09-08 19:08:19,654.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:22,660.listen_for_message.INFO Received: {"Song": "Felices x Siempre", "Artist(s)": "Maria Becerra"}
+2023-09-08 19:08:22,661.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:25,667.listen_for_message.INFO Received: {"Song": "Envolver", "Artist(s)": "Anitta"}
+2023-09-08 19:08:25,668.listen_for_message.INFO Received message saved to received_messages.csv
+2023-09-08 19:08:28,673.listen_for_message.INFO Received: {"Song": "La Trampa es Ley", "Artist(s)": "LIT killah"}
+2023-09-08 19:08:28,674.listen_for_message.INFO Received message saved to received_messages.csv

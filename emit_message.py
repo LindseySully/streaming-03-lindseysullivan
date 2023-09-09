@@ -20,10 +20,10 @@ import os
 # Setup path to directory of input file
 os.chdir("/Users/lindseysullivan/Documents/School/Streaming-Data/Modules/streaming-03-lindseysullivan")
 
-
 # Import packages for rabbitmq messaging
 import pika
 
+import json
 # Configure logging
 from util_logger import setup_logger
 
@@ -39,7 +39,7 @@ MAX_MESSAGES = 10 # Define the number of max messages
 # ----------------------------------------------------------
 def prepare_message_from_row(row):
     """
-        Prepares a binary message from a given row
+        Prepares a JSON message from a given row
 
     """
     song_name = row[10] # Index 10 corresponds to song name
@@ -49,13 +49,10 @@ def prepare_message_from_row(row):
         "Song": song_name,
         "Artist(s)": artist_name,
     }
-    id,uri, rank, artist_names,artists_num, artist_individual, artist_id, artist_genre, artist_img,collab,track_name,release_date, album_num_tracks,album_cover,source,peak_rank,previous_rank,weeks_on_chart,streams,week,danceability,energy,key,mode,loudness,speechiness,acousticness,instrumentalness,liveness,valence,tempo,duration,country,region,language,pivot = row
-    # use an fstring to create a message from our data
-    fstring_message = f"[{id},{uri}, {rank}, {artist_names},{artists_num},{artist_individual}, {artist_id},{artist_genre}, {artist_img},{collab},{track_name},{release_date}, {album_num_tracks},{album_cover},{source},{peak_rank},{previous_rank},{weeks_on_chart},{streams},{week},{danceability},{energy},{key},{mode},{loudness},{speechiness},{acousticness},{instrumentalness},{liveness},{valence},{tempo},{duration},{country},{region},{language},{pivot}]"
-   
-   # prepare a binary message to stream
-    message = str(message_info).encode()
-    return message
+    # convert dictionary to JSON string
+    json_message = json.dumps(message_info)
+    
+    return json_message
 
 def stream_row(input_file_name):
     """
